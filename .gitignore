@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Env
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Next.js
+apps/web/.next/
+apps/web/out/
+.next/
+out/
+
+# NestJS
+apps/api/dist/
+dist/
+
+# Prisma
+apps/api/prisma/*.db
+apps/api/generated/
+
+# Turbo
+.turbo/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Build
+build/
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Docker
+docker-data/
+
+# Misc
+*.tsbuildinfo
