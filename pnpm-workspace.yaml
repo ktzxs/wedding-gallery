@@ -3,5 +3,10 @@ packages:
   - "packages/*"
 
 allowBuilds:
-  - sharp
-  - unrs-resolver
+  '0': sharp
+  '1': unrs-resolver
+  '@prisma/client': false
+  '@prisma/engines': false
+  prisma: false
+  sharp: false
+  unrs-resolver: false
