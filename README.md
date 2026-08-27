@@ -30,7 +30,7 @@ Antes de começar, você precisará ter instalado em sua máquina:
 
 1. **Clone o repositório:**
    ```bash
-   git clone <url-do-seu-repositorio>
+   git clone url-do-repositorio
    cd wedding-gallery
    ```
 
