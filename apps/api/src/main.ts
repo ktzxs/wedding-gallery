@@ -18,6 +18,10 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api');
 
+  app.enableCors({
+    origin: 'https://wedding-gallery-three-nu.vercel.app',
+  });
+
   const PORT = process.env.PORT ?? 4000
   await app.listen(PORT)
   console.log(`Application is running in http://localhost:${PORT}/api`);
