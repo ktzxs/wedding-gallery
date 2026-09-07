@@ -19,7 +19,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   app.enableCors({
-    origin: 'https://wedding-gallery-three-nu.vercel.app',
+    origin: 'https://wedding-gallery-web-seven.vercel.app',
   });
 
   const PORT = process.env.PORT ?? 4000
