@@ -6,19 +6,31 @@
   --color-sky: #6FA8F5;
   --color-deep: #2E6FE0;
   --color-ink: #1B3A5C;
-
-  --font-display: var(--font-display);
-  --font-body: var(--font-body);
 }
 
 body {
   background: var(--color-mist);
   color: var(--color-ink);
-  font-family: var(--font-body);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
 }
 
 .font-display {
-  font-family: var(--font-display);
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.flourish::before,
+.flourish::after {
+  content: "";
+  height: 1px;
+  width: 28px;
+  background: var(--color-sky);
+  opacity: 0.6;
 }
 
 .glass {
@@ -32,7 +44,6 @@ body {
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(20px, -30px) scale(1.08); }
 }
-
 .bokeh {
   position: absolute;
   border-radius: 9999px;
@@ -42,11 +53,34 @@ body {
   pointer-events: none;
 }
 
+.shine-btn {
+  position: relative;
+  overflow: hidden;
+}
+.shine-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.shine-btn:hover::after {
+  left: 125%;
+}
+
 @keyframes develop {
   0% { opacity: 0; filter: blur(14px); transform: scale(1.03); }
   100% { opacity: 1; filter: blur(0); transform: scale(1); }
 }
-
 .photo-develop {
   animation: develop 900ms ease-out forwards;
 }
